@@ -43,7 +43,7 @@ function wpnet_divi_logo_style_generate_svg() {
 	$blog_name = get_bloginfo( 'name' );
 	$letter    = mb_strtoupper( mb_substr( $blog_name, 0, 1 ) );
 
-	$svg_logo = 'data:image/svg+xml;base64,' . base64_encode( '<svg width="600" height="100" version="1.1" viewBox="0 0 600 100" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><metadata><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/><dc:title/></cc:Work></rdf:RDF></metadata><text x="115" y="78" fill="#716f6e" font-family="Raleway" font-size="60px" font-weight="400" letter-spacing="0px" stroke-width=".25" word-spacing="0px" style="line-height:125%" xml:space="preserve">' . $blog_name . '</text><text x="50" y="78" fill="#716f6e" font-family="Raleway" font-size="80px" font-weight="400" letter-spacing="0px" stroke-width=".20" word-spacing="0px" xml:space="preserve" text-anchor="middle">' . $letter . '</text><ellipse cx="50" cy="50" rx="48" ry="48" fill="none" stroke="#716f6e" stroke-width="4"/></svg>' );
+	$svg_logo = 'data:image/svg+xml;base64,' . base64_encode( '<svg width="800" height="100" version="1.1" viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><metadata><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/><dc:title/></cc:Work></rdf:RDF></metadata><text x="115" y="78" fill="#716f6e" font-family="Raleway" font-size="60px" font-weight="400" letter-spacing="0px" stroke-width=".25" word-spacing="0px" style="line-height:125%" xml:space="preserve">' . $blog_name . '</text><text x="50" y="78" fill="#716f6e" font-family="Raleway" font-size="80px" font-weight="400" letter-spacing="0px" stroke-width=".20" word-spacing="0px" xml:space="preserve" text-anchor="middle">' . $letter . '</text><ellipse cx="50" cy="50" rx="48" ry="48" fill="none" stroke="#716f6e" stroke-width="4"/></svg>' );
 
 	et_update_option( 'divi_logo', $svg_logo );
 }
@@ -52,7 +52,7 @@ function wpnet_divi_logo_style_generate_svg() {
  * Enqueue google font Raleway
  */
 function wpnet_divi_logo_style_enqueue_font() {
-	wp_enqueue_style( 'font_raleway', 'https://fonts.googleapis.com/css?family=Raleway&amp;subset=latin-ext', false );
+	wp_enqueue_style( 'font_raleway', 'https://fonts.googleapis.com/css?family=Raleway&amp;subset=latin-ext', false, '1.0' );
 }
 add_action( 'wp_enqueue_scripts', 'wpnet_divi_logo_style_enqueue_font' );
 
@@ -63,8 +63,8 @@ function wpnet_divi_logo_style_admin_notice() {
 	if ( ! function_exists( 'et_update_option' ) ) {
 		?>
 		<div class="notice notice-error">
-			<p><?php _e( '<strong>WPnet.pl DIVI style logo plugin</strong> works only when you use DIVI or DIVI Child theme. You cat deactivate it on ', 'wpnet_divi_logo_style' ); ?>
-				<a href="<?php echo admin_url( 'plugins.php' ); ?>"><?php _e( 'plugins page', 'wpnet_divi_logo_style' ); ?></a>.
+			<p><?php esc_html_e( 'WPnet.pl DIVI style logo plugin works only when you use DIVI or DIVI Child theme. You cat deactivate it on ', 'wpnet_divi_logo_style' ); ?>
+				<a href="<?php echo esc_url( admin_url( 'plugins.php' ) ); ?>"><?php esc_html_e( 'plugins page', 'wpnet_divi_logo_style' ); ?></a>.
 			</p>
 		</div>
 		<?php

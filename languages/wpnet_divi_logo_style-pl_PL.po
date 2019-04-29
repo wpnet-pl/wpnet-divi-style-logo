@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WPnet.pl DIVI style logo\n"
-"POT-Creation-Date: 2018-12-21 18:47+0200\n"
-"PO-Revision-Date: 2018-12-21 18:47+0200\n"
+"POT-Creation-Date: 2019-04-29 17:32+0300\n"
+"PO-Revision-Date: 2019-04-29 17:33+0300\n"
 "Last-Translator: wpnet.pl <info@wpnet.pl>\n"
 "Language-Team: \n"
 "Language: pl\n"
@@ -16,14 +16,14 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html__\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../wpnet-divi-style-logo.php:58
+#: ../wpnet-divi-style-logo.php:66
 msgid ""
-"<strong>WPnet.pl DIVI style logo plugin</strong> works only when you use "
-"DIVI or DIVI Child theme. You cat deactivate it on "
+"WPnet.pl DIVI style logo plugin works only when you use DIVI or DIVI Child "
+"theme. You cat deactivate it on "
 msgstr ""
-"Wtyczka <strong>WPnet.pl DIVI style logo </strong> działa tylko kiedy "
-"używasz motywu Divi lub motywu potomnego Divi. Możesz ją deaktywować na "
+"Wtyczka WPnet.pl DIVI style logo działa tylko kiedy używasz motywu Divi lub "
+"motywu potomnego Divi. Możesz ją deaktywować na "
 
-#: ../wpnet-divi-style-logo.php:59
+#: ../wpnet-divi-style-logo.php:67
 msgid "plugins page"
 msgstr "stronie wtyczek"
